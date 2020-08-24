@@ -22,7 +22,7 @@ namespace TinkoffHelper
 
         static void Main(string[] args)
         {
-            var token = File.ReadAllText("token.txt");
+            var token = File.ReadAllText("token.txt").Replace("\n", "").Replace("\t", "").Replace(" ", "");
             RestConfiguration = new RestConfiguration
             {
                 AccessToken = token,
